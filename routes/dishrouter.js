@@ -27,9 +27,10 @@ dishRouter.route('/')
 
 .delete((req,res,next)=>{
     res.end('Deleting all the dishes');
-})
+});
 
-.get((req,res,next)=>{
+
+dishRouter.route('/:dishId').get((req,res,next)=>{
     res.end('Will send details of dish: ' +req.params.dishId + ' to you!');
 })
 
